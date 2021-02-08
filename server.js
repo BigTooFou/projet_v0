@@ -9,6 +9,12 @@ app.get('/', (request, response) => {
     response.render('pages/index', {test: 'Damienne'})
 })
 
+
+
+
+app.listen(2502)
+
+
 const http = require("https");
 
 const options = {
@@ -37,6 +43,3 @@ const req = http.request(options, function (res) {
 });
 
 req.end();
-
-
-app.listen(2502)
