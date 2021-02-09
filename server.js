@@ -13,7 +13,7 @@ let request = require('request')
 
 request({
 
-    uri: "http://perdu.com",
+    uri: "https://www.instagram.com/paul_faurie/",
 
 }, function(error,response,body){
 
