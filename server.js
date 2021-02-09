@@ -9,6 +9,7 @@ app.get('/', (request, response) => {
     response.render('pages/index', {test: 'Damienne'})
 })
 
+let fetch = require('fetch')
 
 const random_wait_time = (waitTime = 300) => new Promise((resolve, reject) => {
     setTimeout(() => {
