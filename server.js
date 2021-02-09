@@ -13,7 +13,7 @@ let request = require('request')
 
 request({
 
-    uri: "http://google.com",
+    uri: "http://perdu.com",
 
 }, function(error,response,body){
 
