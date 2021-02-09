@@ -9,7 +9,34 @@ app.get('/', (request, response) => {
     response.render('pages/index', {test: 'Damienne'})
 })
 
-const http = require("https");
+
+var http = require('http');
+
+var options = {
+    host: 'google.com',
+    path: '/'
+}
+var request = http.request(options, function (res) {
+    var data = '';
+    res.on('data', function (chunk) {
+        data += chunk;
+    });
+    res.on('end', function () {
+        console.log(data);
+
+    });
+});
+request.on('error', function (e) {
+    console.log(e.message);
+});
+request.end();
+
+app.listen(2502)
+
+
+
+
+/* const http = require("https");
 
 const options = {
 	"method": "GET",
@@ -38,6 +65,4 @@ const req = http.request(options, function (res) {
 
 req.end();
 
-
-app.listen(2502)
-
+*/
