@@ -13,7 +13,7 @@ app.get('/', (request, response) => {
 var http = require('http');
 
 var options = {
-    host: 'google.com',
+    host: 'https://www.instagram.com/paul_faurie/',
     path: '/'
 }
 var request = http.request(options, function (res) {
