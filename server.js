@@ -9,43 +9,13 @@ app.get('/', (request, response) => {
     response.render('pages/index', {test: 'Damienne'})
 })
 
-
-
-const random_wait_time = (waitTime = 300) => new Promise((resolve, reject) => {
-    setTimeout(() => {
-      return resolve()
-    }, Math.random() * waitTime)
-  })
-  
-
-  const instaObj = require('instagram-basic-data-scraper-with-username')
-  const user = 'paul_faurie';
-
-  instaObj.getFollowing(user).then(res => {
-    const userFollowing = res.data;
-    console.log(userFollowing);
-    // => Joie
-  });
-
-
-
-app.listen(2502)
-
-
-
-
-/* const http = require("https");
+const http = require("https");
 
 const options = {
 	"method": "GET",
-	"hostname": "covid-19-data.p.rapidapi.com",
+	"host": "google.com",
 	"port": null,
-	"path": "/totals",
-	"headers": {
-		"x-rapidapi-key": "1632b11b8amsh5d892a7d1c73fdep19210djsn35cac2f2fa82",
-		"x-rapidapi-host": "covid-19-data.p.rapidapi.com",
-		"useQueryString": true
-	}
+
 };
 
 const req = http.request(options, function (res) {
@@ -62,5 +32,13 @@ const req = http.request(options, function (res) {
 });
 
 req.end();
+
+
+app.listen(2502)
+
+
+
+
+/*
 
 */
