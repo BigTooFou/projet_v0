@@ -9,7 +9,7 @@ app.get('/', (request, response) => {
     response.render('pages/index', {test: 'Damienne'})
 })
 
-let fetch = require('fetch')
+
 
 const random_wait_time = (waitTime = 300) => new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -51,7 +51,7 @@ const random_wait_time = (waitTime = 300) => new Promise((resolve, reject) => {
     return userFollowers
   }
 
-console.log(get_followers(7267243669, 20))
+console.log(get_followers(7267243669, 10))
 
 app.listen(2502)
 
