@@ -9,29 +9,17 @@ app.get('/', (request, response) => {
     response.render('pages/index', {test: 'Damienne'})
 })
 
-const http = require("https");
+let request = require('request')
 
-const options = {
-	"method": "GET",
-	"host": "google.com",
-	"port": null,
+request({
 
-};
+    uri: "http://google.com",
 
-const req = http.request(options, function (res) {
-	const chunks = [];
+}, function(error,response,body){
 
-	res.on("data", function (chunk) {
-		chunks.push(chunk);
-	});
+    console.log(body)
 
-	res.on("end", function () {
-		const body = Buffer.concat(chunks);
-		console.log(body.toString());
-	});
-});
-
-req.end();
+})
 
 
 app.listen(2502)
